@@ -1,4 +1,6 @@
 <% if post.image.present? %>
-  <%= image_tag post.image.url(:medium), :alt => post.title %>
+  <div class="image_container">
+    <%= image_tag post.image.url(:medium), :alt => post.title %>
+  </div>
 <% end %>
 <%= format_content(post.body) %>

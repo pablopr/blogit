@@ -1,0 +1,33 @@
+es:
+  blogit:
+    posts:
+      written_by: "Escrito por %{author} el"
+      prohibited_this_post_from_being_saved:
+        one: "Un error impidió guardar esto:"
+        other: "%{count} errores impidieron guardar esto:"
+      give_your_post_a_title: "Dale un título al artículo"
+      write_something_here: "Escribe algo aquí..."
+      tip_you_can_style_your_post_using: "Consejo: puedes dar forma a tu artículo usando %{parser}"
+      or: "o"
+      cancel: "cancelar"
+      edit: "editar"
+      delete: "borrar"
+      are_you_sure_you_want_to_remove_this_post: "¿Seguro que quieres borrar este post?"
+      comment:
+        one: "1 comentario"
+        other: "%{count} comentarios"
+      edit_blog_post: "Editar Post #%{id}"
+      new_blog_post: "Nuevo post"
+      write_a_new_blog_post: "Escribe un nuevo artículo"
+      blog_post_was_successfully_created: "Artículo creado."
+      blog_post_was_successfully_updated: "Artículo actualizado."
+      blog_post_was_successfully_destroyed: "Artículo borrado."
+      related_posts: "Posts relacionados"
+      tag_placeholder: "Añade etiquetas al artículo"
+      
+    share_bar:
+      facebook: "es"
+
+  time:
+    formats:
+      plain_month_only: "%B"
