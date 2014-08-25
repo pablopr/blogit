@@ -24,6 +24,7 @@ es:
       blog_post_was_successfully_destroyed: "Artículo borrado."
       related_posts: "Posts relacionados"
       tag_placeholder: "Añade etiquetas al artículo"
+      tags: "Categorías"
       
     share_bar:
       facebook: "es"
