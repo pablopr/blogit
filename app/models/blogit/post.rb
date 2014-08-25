@@ -28,8 +28,6 @@ module Blogit
     validates :body,  presence: true, length: { minimum: 10 }
     validates :blogger_id, presence: true
     validates :state, presence: true
-    validates_presence_of :sender_id
-    validate :content_or_action_present
     validates_attachment_size :image, :less_than => 9.megabytes
     validates_attachment_content_type :image,
                                     :content_type => ["image/jpeg", "image/png", "image/gif",
