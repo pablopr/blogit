@@ -6,7 +6,11 @@ class CreateBlogitPosts < ActiveRecord::Migration
         r.text :body
         r.string :state, default: Blogit::configuration.hidden_states.first.to_s
         r.integer :comments_count, default: 0
-      end
+        r.string :image_file_name
+        r.string :image_content_type
+        r.string :image_file_size
+        r.string :image_updated_at
+      end 
       t.references :blogger, polymorphic: true
       t.timestamps
     end

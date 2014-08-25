@@ -12,7 +12,14 @@ module Blogit
 
     AVAILABLE_STATUS = (Blogit.configuration.hidden_states + Blogit.configuration.active_states)
 
+    has_attached_file :image, :styles => {
+      :small_3x2 => "240x160#",
+      :medium => "360x270#",
+      :thumb => "120x120#",
+      :original => "1600x1600>",
+      :email => "150x100#"}
 
+  
     # ===============
     # = Validations =
     # ===============
@@ -21,6 +28,14 @@ module Blogit
     validates :body,  presence: true, length: { minimum: 10 }
     validates :blogger_id, presence: true
     validates :state, presence: true
+    validates_presence_of :sender_id
+    validate :content_or_action_present
+    validates_attachment_size :image, :less_than => 9.megabytes
+    validates_attachment_content_type :image,
+                                    :content_type => ["image/jpeg", "image/png", "image/gif",
+                                      "image/pjpeg", "image/x-png"] #the two last types are sent by IE.
+
+
 
     # ================
     # = Associations =
