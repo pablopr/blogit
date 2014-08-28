@@ -9,9 +9,9 @@ module Blogit
 
     # If using Blogit's Create, Update and Destroy actions AND ping_search_engines is
     # set, call ping_search_engines after these requests
-    if Blogit.configuration.include_admin_actions
-      after_filter :ping_search_engines, only: [:create, :update, :destroy], :if => lambda { Blogit.configuration.ping_search_engines }
-    end
+    #if Blogit.configuration.include_admin_actions
+    #  after_filter :ping_search_engines, only: [:create, :update, :destroy], :if => lambda { Blogit.configuration.ping_search_engines }
+    #end
 
     # Raise a 404 error if the admin actions aren't to be included
     # We can't use blogit_conf here because it sometimes raises NoMethodError in main app's routes

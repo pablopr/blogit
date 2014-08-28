@@ -13,11 +13,11 @@ module Blogit
     AVAILABLE_STATUS = (Blogit.configuration.hidden_states + Blogit.configuration.active_states)
 
     has_attached_file :image, :styles => {
-      :small_3x2 => "240x160#",
-      :medium => "540x405#",
-      :thumb => "120x120#",
-      :original => "1600x1600>",
-      :email => "150x100#"}
+      :small => "240",
+      :medium => "600",
+      :thumb => "120",
+      :original => "1600"
+    }
 
   
     # ===============
